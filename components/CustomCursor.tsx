@@ -31,12 +31,18 @@ export default function CustomCursor() {
 
     function onOver(e: Event) {
       const target = e.target as HTMLElement;
+      
+      if (!ring) return;
+      
       if (target.closest("[data-cursor-hover]")) {
         ring.classList.add("hovering");
       }
     }
     function onOut(e: Event) {
       const target = e.target as HTMLElement;
+      
+      if (!ring) return;
+      
       if (target.closest("[data-cursor-hover]")) {
         ring.classList.remove("hovering");
       }
