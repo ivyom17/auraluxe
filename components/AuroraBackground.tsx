@@ -69,6 +69,7 @@ export default function AuroraBackground() {
     
     function onResize() {
         if (!canvas) return;
+      
       width = canvas.width = window.innerWidth;
       height = canvas.height = window.innerHeight;
     }
